@@ -10,6 +10,9 @@ on:
         description: 'Specific HTML file to screenshot (optional)'
         required: false
 
+permissions:
+  contents: write
+
 jobs:
   screenshot:
     runs-on: ubuntu-latest

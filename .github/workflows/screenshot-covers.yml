@@ -1,0 +1,100 @@
+name: Screenshot Substack Covers
+
+on:
+  push:
+    paths:
+      - 'substack/**/*.html'
+  workflow_dispatch:
+    inputs:
+      html_file:
+        description: 'Specific HTML file to screenshot (optional)'
+        required: false
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm install playwright
+          npx playwright install chromium
+
+      - name: Screenshot HTML files
+        run: |
+          node << 'EOF'
+          const { chromium } = require('playwright');
+          const fs = require('fs');
+          const path = require('path');
+
+          async function screenshotHTML(htmlPath) {
+            const browser = await chromium.launch();
+            const page = await browser.newPage();
+
+            // Substack cover dimensions
+            await page.setViewportSize({ width: 1456, height: 600 });
+
+            const html = fs.readFileSync(htmlPath, 'utf-8');
+            await page.setContent(html);
+            await page.waitForLoadState('networkidle');
+
+            // Wait for fonts
+            await page.waitForTimeout(1000);
+
+            const pngPath = htmlPath.replace('.html', '.png');
+            await page.screenshot({
+              path: pngPath,
+              clip: { x: 0, y: 0, width: 1456, height: 600 }
+            });
+
+            await browser.close();
+            console.log(`Created: ${pngPath}`);
+            return pngPath;
+          }
+
+          async function main() {
+            const substackDir = './substack';
+            if (!fs.existsSync(substackDir)) {
+              console.log('No substack directory found');
+              return;
+            }
+
+            const htmlFiles = fs.readdirSync(substackDir)
+              .filter(f => f.endsWith('.html'))
+              .map(f => path.join(substackDir, f));
+
+            // Only process HTML files without corresponding PNG (or newer than PNG)
+            const toProcess = htmlFiles.filter(html => {
+              const png = html.replace('.html', '.png');
+              if (!fs.existsSync(png)) return true;
+              return fs.statSync(html).mtime > fs.statSync(png).mtime;
+            });
+
+            if (toProcess.length === 0) {
+              console.log('All HTML files already have up-to-date PNGs');
+              return;
+            }
+
+            console.log(`Processing ${toProcess.length} HTML files...`);
+            for (const html of toProcess) {
+              await screenshotHTML(html);
+            }
+          }
+
+          main().catch(console.error);
+          EOF
+
+      - name: Commit PNGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add substack/*.png
+          git diff --staged --quiet || git commit -m "Auto-generate Substack cover images"
+          git push

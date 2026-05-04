@@ -1,6 +1,6 @@
-# Week of 2026-05-05 - PVP Research Workflow
+# Week of 2026-05-05 - GTM Research Workflow
 
-Source: `/pvp-research statii.co.uk` session - documenting how we build Permissionless Value Props
+Source: Statii.co.uk research session - documenting how we build targeted outbound messaging
 
 ---
 
@@ -26,7 +26,7 @@ Same depth. 8 minutes instead of 4 hours.
 
 The trick is each track is independent. Nothing in Track 3 depends on Track 2. So why wait?
 
-This morning we ran research on a UK MRP software company. 47 sources. 25 customer quotes. 7 competitors analyzed. 7 deployment-ready PVPs.
+This morning we ran research on a UK MRP software company. 47 sources. 25 customer quotes. 7 competitors analyzed. 7 deployment-ready outbound messages.
 
 Parallelism isn't a hack. It's just not doing the slow thing when you don't have to.
 
@@ -83,7 +83,7 @@ That's not a marketing story. That's an irreplicable moat.
 
 MRPeasy can't claim 30 years in metal fab. Neither can Katana or Odoo. It's authentic because it's true.
 
-The PVP writes itself: "MRP built by fabricators, for fabricators."
+The message writes itself: "MRP built by fabricators, for fabricators."
 
 When you're doing customer research, dig for the founder story. How did this company actually start? What problem did the founders personally experience?
 
@@ -105,7 +105,7 @@ What's the founder story you're not telling?
 
 ## Notes
 
-- All three posts come from the Statii PVP research session
-- Theme: Breaking down the PVP research methodology into teachable components
+- All three posts come from the Statii research session
+- Theme: Breaking down the research methodology into teachable components
 - Each post is standalone but forms a narrative arc (parallel research → signal detection → positioning)
 - Questions at the end designed to invite comments from founders/sales leaders

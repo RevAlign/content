@@ -97,6 +97,111 @@ Which one would you rather prospect?
 
 ---
 
+## Friday: Speed is Table Stakes
+
+**Graphic:** `04_table_stakes.png`
+**Pillar:** RevOps for Early-Stage
+
+Analyzed 7 alt-lenders last week.
+
+Every single one claims:
+- Same-day funding
+- No hard credit pull
+- Simple application
+- Fast approval
+
+When your "differentiator" is the same as everyone else's, it's not a differentiator. It's table stakes.
+
+So I asked a different question: What can this company offer that competitors literally cannot match?
+
+Found 4 things:
+
+**1. Zero-interest switching**
+$40K interest-free if you move your payment processing. Nobody else bundles this.
+
+**2. Float protection**
+Cash buffer when your processor freezes funds. A product that doesn't exist elsewhere.
+
+**3. $10M loan cap**
+Most competitors max at $500K. For real expansion, size matters.
+
+**4. No platform lock-in**
+Unlike Square/PayPal, use their lending without switching your whole stack.
+
+Speed is the cost of entry. The real question is: what's your moat?
+
+---
+
+## Bonus 1: The Undetectable Signal
+
+**Graphic:** `05_undetectable_signal.png`
+**Pillar:** Data Quality & Enrichment
+
+The best buying signal I found has 10/10 pain and 3/10 detectability.
+
+Bank loan rejection.
+
+80% of small businesses get denied by traditional banks. They desperately need alternatives. Budget is pre-approved. Decision timeline is urgent.
+
+Perfect signal. One problem: rejections are private. You can't scrape them.
+
+So I scored every signal on two axes:
+- Pain intensity (how much does it hurt?)
+- Detectability (can you find these companies?)
+
+| Signal | Pain | Detect |
+|--------|------|--------|
+| Bank rejection | 10 | 3 |
+| Hiring Controller | 7 | 9 |
+| Opening new location | 8 | 8 |
+| Series A funding | 7 | 10 |
+| Healthcare vertical | 8 | 9 |
+
+The insight: Use high-pain/low-detect signals for inbound and SEO. Use high-detect signals for outbound.
+
+Same buyers. Different entry points.
+
+What's your highest-pain signal?
+
+---
+
+## Bonus 2: Mining Trustpilot
+
+**Graphic:** `06_trustpilot_mining.png`
+**Pillar:** Data Quality & Enrichment
+
+Spent 2 hours reading 200+ Trustpilot reviews for a client.
+
+Got more insight than 15 sales calls.
+
+Customers are literally telling you how to sell to them. You just have to listen.
+
+What to extract:
+
+**Pain statements**
+"They heard my urgent need at 9 am and by 4 pm there was money in my account."
+→ Pain category: Urgency
+
+**Switching triggers**
+"I switched my processing and received $40,000 interest free."
+→ Pain category: Incentive to switch
+
+**Before/after**
+"Growing from $3M to $25M wouldn't have been possible without their backing."
+→ Pain category: Growth enablement
+
+**Friction points**
+"The process was simple, quick and hassle free."
+→ Pain category: Process friction (competitors have it, they don't)
+
+15 reviews. 4 pain categories. One hour of work.
+
+Your prospects are writing your copy for you.
+
+What review site are you mining?
+
+---
+
 ## Notes
 
 **Theme differentiation**: This series focuses on data extraction and niche sources, not CRM cleanup or HubSpot configuration. Positions RevAlign as doing deeper research than typical prospecting.
@@ -106,3 +211,4 @@ Which one would you rather prospect?
 **Source material**: Combined niche data sources from:
 - altbanq.com PVP research (SBA, CFPB, BuiltWith, health dept databases)
 - skolnik.com PVP research (EPA RCRAInfo, NRC ADAMS, FDA Warning Letters, PHMSA, DOD contracts)
+- altbanq.com analysis (EDP scoring, wedge ranking, customer quotes)
